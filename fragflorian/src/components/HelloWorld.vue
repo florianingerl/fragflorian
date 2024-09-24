@@ -6,15 +6,11 @@ export default defineComponent({
     msg: String
   },
   setup(props) {
-    props.message // <-- type: string
+    props.msg // <-- type: string
   },
   methods : {
     handleClick(x: Number){
       console.log("x=" + x);
-
-      let y = 5;
-      y = "Florian";
-      console.log(y);
     }
   }
 })
@@ -24,7 +20,6 @@ export default defineComponent({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <button @click="handleClick(16)">Click me</button>
-    <button @click="handleClick('Amen')">Click me</button>
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
